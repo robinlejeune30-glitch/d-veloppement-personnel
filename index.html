@@ -2,10 +2,109 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Test Simple</title>
+  <title>Développement Personnel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 80px 20px 50px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 5rem; /* TITRE GROS */
+      margin: 0 0 25px;
+      letter-spacing: 4px;
+    }
+    header p.subtitle {
+      font-size: 1.8rem; /* DESCRIPTION PLUS GROSSE */
+      font-weight: 600;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 70px;
+      font-size: 1.3rem; /* TEXTE GROS */
+      line-height: 1.9;
+      color: #333;
+    }
+    main h2 {
+      font-size: 2.5rem; /* SOUS-TITRE GROS */
+      margin-bottom: 25px;
+      color: #000;
+      text-align: center;
+    }
+    nav {
+      background-color: #111;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 15px 0;
+      gap: 40px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #999;
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      background-color: #000;
+      color: #fff;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
-<body style="background: black; color: white; font-size: 40px; text-align: center; padding: 100px;">
-  C'est le nouveau site !<br />
-  Le texte est en blanc sur fond noir.
+<body>
+  <header>
+    <h1>Développement Personnel</h1>
+    <p class="subtitle">Je m'appelle <strong>Robin</strong>, j'ai 20 ans, jeune entrepreneur sportif.<br />
+    Je pratique la musculation, la course à pied et le MMA depuis mon enfance.<br />
+    À travers ce site, je partage mes méthodes pour t'aider à évoluer physiquement, mentalement et financièrement.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Qu'est-ce que le développement personnel ?</h2>
+    <p>Le développement personnel est un voyage intérieur qui vise à améliorer ta connaissance de toi-même, à renforcer ta confiance, ta discipline, et ta capacité à atteindre tes objectifs.<br />
+    C’est la clé pour libérer ton potentiel, gérer ton stress, améliorer tes relations et adopter des habitudes positives au quotidien.<br />
+    Que ce soit par le sport, la nutrition, ou la gestion mentale, ce chemin te permet de devenir la meilleure version de toi-même.</p>
+    
+    <p>Sur ce site, je te propose des outils, des formations et un accompagnement bienveillant pour te guider étape par étape vers une vie plus équilibrée, plus saine, et plus épanouissante.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Développement Personnel - Robin</p>
+  </footer>
 </body>
 </html>
