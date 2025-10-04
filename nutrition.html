@@ -1,35 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Nutrition - Développement Personnel</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Nutrition</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="formations.html">Formations</a></li>
-        <li><a href="nutrition.html" class="active">Nutrition</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Comprendre et améliorer son alimentation</h2>
-    <p>Une bonne nutrition est essentielle pour ton bien-être physique et mental. Tu trouveras ici des conseils pratiques, des plans alimentaires, et des formations pour apprendre à manger sainement.</p>
-    
-    <div class="formation coming-soon">
-      <h3>Formations nutrition à venir...</h3>
-      <p>Exemples de menus, gestion des macros, alimentation pour la performance, etc.</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2025 Développement Personnel - Robin</p>
-  </footer>
-</body>
-</html>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+    nav {
+      background-color: #111;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 15px 0;
+      gap: 40px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #999;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+      font-size: 1.3rem;
+      color: #333;
+    }
+    main h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .formation {
+      background: #f0f0f0;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      border-left: 6px solid #000;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .formation h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    .formation p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color
