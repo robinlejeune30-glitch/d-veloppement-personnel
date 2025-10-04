@@ -1,44 +1,108 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Développement Personnel</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 60px 20px 40px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 4.5rem;
+      margin: 0 0 20px;
+      letter-spacing: 3px;
+    }
+    header p.subtitle {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0 0 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #333;
+    }
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #000;
+      text-align: center;
+    }
+    nav {
+      background-color: #111;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 10px 0;
+      gap: 30px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #999;
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #000;
+      color: #fff;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Développement Personnel</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="formations.html">Formations</a></li>
-        <li><a href="nutrition.html">Nutrition</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <p class="subtitle">Je m'appelle <strong>Robin</strong>, j'ai 20 ans, jeune entrepreneur sportif.  
+    Je pratique la musculation, la course à pied et le MMA depuis mon enfance.  
+    À travers ce site, je partage mes méthodes pour t'aider à évoluer physiquement, mentalement et financièrement.</p>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Maîtrise ton corps, ton esprit et ta vie</h2>
-      <p>Bienvenue sur mon site dédié au développement personnel. Ici, tu découvriras des ressources concrètes pour évoluer dans les domaines du sport, de la nutrition et de la finance. Mon objectif : t'aider à devenir la meilleure version de toi-même.</p>
-    </section>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="nutrition.html">Nutrition</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="highlights">
-      <div class="card">
-        <h3>Formations</h3>
-        <p>Accède à des formations gratuites et payantes sur la discipline, la motivation et les habitudes.</p>
-      </div>
-      <div class="card">
-        <h3>Nutrition</h3>
-        <p>Apprends à bien manger pour mieux vivre, avec des plans adaptés à tes objectifs.</p>
-      </div>
-      <div class="card">
-        <h3>Coaching</h3>
-        <p>Un accompagnement personnalisé pour passer au niveau supérieur, mentalement et physiquement.</p>
-      </div>
-    </section>
+  <main>
+    <h2>Qu'est-ce que le développement personnel ?</h2>
+    <p>Le développement personnel est un voyage intérieur qui vise à améliorer ta connaissance de toi-même, à renforcer ta confiance, ta discipline, et ta capacité à atteindre tes objectifs.  
+    C’est la clé pour libérer ton potentiel, gérer ton stress, améliorer tes relations et adopter des habitudes positives au quotidien.  
+    Que ce soit par le sport, la nutrition, ou la gestion mentale, ce chemin te permet de devenir la meilleure version de toi-même.</p>
+    
+    <p>Sur ce site, je te propose des outils, des formations et un accompagnement bienveillant pour te guider étape par étape vers une vie plus équilibrée, plus saine, et plus épanouissante.</p>
   </main>
 
   <footer>
