@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programme personnalisé - Développement Personnel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f6f7;
+      --card:#ffffff;
+      --accent:#007acc;
+      --dark:#111;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--dark);
+      margin:0;
+      padding:30px;
+      display:flex;
+      justify-content:center;
+    }
+    .container{
+      width:100%;
+      max-width:900px;
+    }
+    header{
+      text-align:center;
+      margin-bottom:20px;
+    }
+    header h1{
+      font-size:2.6rem;
+      margin:0 0 6px;
+    }
+    header p{color:#444;margin:0}
+    .card{
+      background:var(--card);
+      padding:26px;
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.08);
+    }
+    form .row{
+      display:flex;
+      gap:16px;
+      margin-bottom:14px;
+      flex-wrap:wrap;
+    }
+    label{display:block;font-weight:600;margin-bottom:8px}
+    input[type="text"], input[type="email"], input[type="number"], textarea, select{
+      width:100%;
+      padding:12px 14px;
+      border:1px solid #e0e0e0;
+      border-radius:8px;
+      font-size:1rem;
+      background:#fff;
+    }
+    textarea{min-height:120px; resize:vertical}
+    .full{flex:1 1 100%}
+    .half{flex:1 1 calc(50% - 8px)}
+    .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:white;
+      padding:12px 22px;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      border:none;
+      cursor:pointer;
+      font-size:1rem;
+    }
+    .btn:disabled{opacity:0.6;cursor:not-allowed}
+    .muted{color:#666;font-size:0.95rem;margin-top:8px}
+    .success{background:#e6ffef;border-left:4px solid #2ecc71;padding:12px;border-radius:8px;color:#013f21;margin-bottom:14px}
+    .error{background:#ffecec;border-left:4px solid #ff6b6b;padding:12px;border-radius:8px;color:#5b0b0b;margin-bottom:14px}
+    .payment-box{margin-top:18px;padding:16px;border-radius:10px;background:#fbfdff;border:1px solid #e7f1ff;text-align:center}
+    .pay-link{display:inline-block;margin-top:12px}
+    @media(max-width:720px){
+      header h1{font-size:2rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Programme personnalisé — 1 mois</h1>
+      <p>Remplis ce formulaire pour obtenir un programme sur-mesure. Paiement : 20 € (après validation).</p>
+    </header>
+
+    <div class="card">
+      <!-- Zone message -->
+      <div id="messageArea" aria-live="polite"></div>
+
+      <!-- Formulaire -->
+      <form id="personalForm">
+        <div class="row">
+          <div class="half">
+            <label for="prenom">Prénom</label>
+            <input id="prenom" name="prenom" type="text" required />
+          </div>
+          <div class="half">
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="half">
+            <label for="age">Âge</label>
+            <input id="age" name="age" type="number" min="13" max="99" required />
+          </div>
+          <div class="half">
+            <label for="metier">Métier / occupation</label>
+            <input id="metier" name="metier" type="text" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="full">
+            <label for="objectif">Objectif principal (sélectionnez)</label>
+            <select id="objectif" name="objectif" required>
+              <option value="">-- Choisir --</option>
+              <option value="remise_en_forme">Remise en forme</option>
+              <option value="perte_de_poids">Perdre du poids</option>
+              <option value="prendre_du_muscle">Prendre du muscle</option>
+              <option value="etre_plus_athletique">Devenir plus athlétique</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="full">
+            <label for="raison">Explique en quelques lignes pourquoi tu veux un programme personnalisé (objectifs, contraintes, antécédents, blessures, fréquence souhaitée, matériel disponible...)</label>
+            <textarea id="raison" name="raison" placeholder="Ex : Je veux perdre 5 kg en 3 mois, j'ai un emploi du temps chargé, je n'ai qu'un tapis et des haltères..."></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="full">
+            <label for="prefer">Préférences / remarques (ex: jour préféré pour s'entraîner, blessures, aliments à éviter)</label>
+            <textarea id="prefer" name="prefer" placeholder="Ex : je ne mange pas de porc, je préfère m'entraîner le matin..."></textarea>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center;margin-top:12px">
+          <button type="submit" id="submitBtn" class="btn">Envoyer et passer au paiement</button>
+          <div class="muted">Prix : <strong>20 € / 1 mois</strong> — paiement à la fin</div>
+        </div>
+
+        <p class="muted">Après avoir envoyé le formulaire, tu recevras un bouton pour payer via PayPal. Les informations me seront également envoyées par email.</p>
+      </form>
+
+      <!-- Zone qui affichera le bouton PayPal après envoi -->
+      <div id="afterSend" style="display:none">
+        <div class="payment-box">
+          <div style="font-weight:700">Formulaire enregistré ✅</div>
+          <div style="margin-top:8px" class="muted">Clique ci‑dessous pour payer 20 € et activer ton programme.</div>
+          <!-- Replace PAYPAL_ME_LINK below with your PayPal.me link (example: https://www.paypal.com/paypalme/TONPSEUDO/20) -->
+          <div class="pay-link">
+            <a id="paypalLink" class="btn" target="_blank" rel="noopener noreferrer">Payer 20 € (PayPal)</a>
+          </div>
+
+          <div style="margin-top:12px" class="muted">Après le paiement, envoie‑moi un message si nécessaire : <strong><a href="mailto:robinlejeune30@gmail.com">robinlejeune30@gmail.com</a></strong></div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;margin-top:18px;color:#666;font-size:0.95rem">
+      Notes : Le paiement s'effectue via PayPal. Pour que l’email arrive automatiquement dans ta boîte, suis les instructions de configuration ci‑dessous (Formspree) — option sans code.
+    </p>
+
+    <!-- Explications / setup -->
+    <div class="card" style="margin-top:20px">
+      <h3 style="margin:0 0 10px">Configuration rapide (à faire une seule fois)</h3>
+      <ol>
+        <li>Crée un compte gratuit sur <strong>Formspree</strong> (https://formspree.io) → crée un formulaire → récupère ton endpoint (ex : <code>https://formspree.io/f/xxxxx</code>).</li>
+        <li>Dans le code ci‑dessous, remplace <code>REPLACE_WITH_FORMSPREE_ENDPOINT</code> par ton endpoint Formspree.</li>
+        <li>Dans le bouton PayPal plus haut, remplace <code>REPLACE_WITH_PAYPAL_LINK</code> par ton lien PayPal.me (ex : <code>https://www.paypal.com/paypalme/TONPSEUDO/20</code>).</li>
+        <li>Uploader ce fichier sur ton site puis teste : remplis le formulaire → vérifie réception mail → clique sur Payer.</li>
+      </ol>
+      <p class="muted" style="margin-top:8px">Si tu ne veux pas utiliser Formspree, le formulaire proposera d'envoyer les données via mailto: (moins automatique pour l'utilisateur).</p>
+    </div>
+  </div>
+
+<script>
+/*
+  Comportement :
+  - Envoie les données au endpoint Formspree via fetch POST (JSON).
+  - Si succès, affiche la zone "afterSend" avec le lien PayPal.
+  - Si l'utilisateur n'a pas configuré Formspree, on propose fallback mailto.
+  
+  IMPORTANT : Remplace REPLACE_WITH_FORMSPREE_ENDPOINT par ton endpoint Formspree.
+  Remplace REPLACE_WITH_PAYPAL_LINK par ton lien PayPal.me (ex: https://www.paypal.com/paypalme/TONPSEUDO/20).
+*/
+
+const FORMSPREE_ENDPOINT = 'REPLACE_WITH_FORMSPREE_ENDPOINT'; // <-- Remplace ici
+const PAYPAL_LINK = 'REPLACE_WITH_PAYPAL_LINK'; // <-- Remplace ici (ex: https://www.paypal.com/paypalme/TONPSEUDO/20)
+
+const form = document.getElementById('personalForm');
+const msgArea = document.getElementById('messageArea');
+const afterSend = document.getElementById('afterSend');
+const paypalLinkEl = document.getElementById('paypalLink');
+
+paypalLinkEl.href = PAYPAL_LINK;
+
+function showMessage(type, text){
+  msgArea.innerHTML = `<div class="${type === 'success' ? 'success' : 'error'}">${text}</div>`;
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  msgArea.innerHTML = ''; // clear
+  const submitBtn = document.getElementById('submitBtn');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Envoi en cours...';
+
+  // collect data
+  const data = {
+    prenom: form.prenom.value.trim(),
+    nom: form.nom.value.trim(),
+    age: form.age.value.trim(),
+    metier: form.metier.value.trim(),
+    objectif: form.objectif.value,
+    raison: form.raison.value.trim(),
+    preferences: form.prefer.value.trim(),
+    sentAt: new Date().toISOString()
+  };
+
+  // Simple validation
+  if (!data.prenom || !data.nom || !data.age || !data.objectif){
+    showMessage('error','Merci de remplir les champs obligatoires (Prénom, Nom, Âge, Objectif).');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Envoyer et passer au paiement';
+    return;
+  }
+
+  // If user didn't set Formspree endpoint, offer mailto fallback
+  if (!FORMSPREE_ENDPOINT || FORMSPREE_ENDPOINT.includes('REPLACE_WITH_FORMSPREE_ENDPOINT')) {
+    showMessage('error','Aucun endpoint Formspree configuré. Les données seront préparées pour envoi par email (ou configure Formspree pour envoi automatique).');
+    // prepare mailto as fallback
+    const subject = encodeURIComponent('Demande de programme personnalisé - ' + data.prenom + ' ' + data.nom);
+    const body = encodeURIComponent(
+      `Prénom: ${data.prenom}\nNom: ${data.nom}\nÂge: ${data.age}\nMétier: ${data.metier}\nObjectif: ${data.objectif}\n\nRaisons / objectifs:\n${data.raison}\n\nPréférences:\n${data.preferences}\n\nEnvoyé le: ${data.sentAt}`
+    );
+    const mailto = `mailto:robinlejeune30@gmail.com?subject=${subject}&body=${body}`;
+    // show pay button and mailto
+    afterSend.style.display = 'block';
+    paypalLinkEl.href = PAYPAL_LINK.includes('REPLACE_WITH_PAYPAL_LINK') ? '#' : PAYPAL_LINK;
+    // show note with direct mailto link
+    msgArea.innerHTML += `<div style="margin-top:12px" class="muted">Ou bien <a href="${mailto}">clique ici pour envoyer les infos par email</a>.</div>`;
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Envoyer et passer au paiement';
+    window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'});
+    return;
+  }
+
+  try {
+    // send to Formspree (expects JSON)
+    const resp = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (resp.ok) {
+      showMessage('success','Formulaire envoyé ! Les informations ont été transmises. Clique ci‑dessous pour effectuer le paiement.');
+      // show payment area
+      afterSend.style.display = 'block';
+      if (PAYPAL_LINK.includes('REPLACE_WITH_PAYPAL_LINK')) {
+        paypalLinkEl.href = '#';
+        paypalLinkEl.textContent = 'Configure ton lien PayPal dans le code';
+        paypalLinkEl.classList.add('disabled');
+      } else {
+        paypalLinkEl.href = PAYPAL_LINK;
+      }
+      // optionally clear form
+      form.reset();
+      window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'});
+    } else {
+      // if Formspree returns error
+      const json = await resp.json().catch(()=>null);
+      showMessage('error','Impossible d’envoyer le formulaire automatiquement. ' + (json && json.error ? json.error : 'Vérifie ton endpoint Formspree.'));
+    }
+  } catch(err) {
+    showMessage('error','Erreur de connexion lors de l’envoi : ' + err.message);
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Envoyer et passer au paiement';
+  }
+});
+</script>
+</body>
+</html>
