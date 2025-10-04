@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Développement Personnel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Développement Personnel</h1>
+    <p class="accroche">“Investis en toi pour transformer ta vie.”</p>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="formations.html">Formations</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact">
+      <h2>Contacte-moi</h2>
+      <p>Pour toute question, écris-moi à : <a href="mailto:robinlejeune30@gmail.com">robinlejeune30@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Développement Personnel - Robin</p>
+  </footer>
+</body>
+</html>
