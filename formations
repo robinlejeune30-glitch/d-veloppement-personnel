@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formations - Développement Personnel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Développement Personnel</h1>
+    <p class="accroche">“Investis en toi pour transformer ta vie.”</p>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="formations.html" class="active">Formations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="formation">
+      <h2>Remise en forme 30 jours – Sans matériel</h2>
+      <p><strong>Gratuit</strong></p>
+      <p>Cette formation est conçue pour te remettre en forme en 30 jours, sans besoin d’équipement ou de matériel spécial.  
+      Que tu sois débutant ou que tu cherches à reprendre une activité physique, ce programme simple et progressif t'accompagne jour après jour.</p>
+      <p>Pourquoi choisir cette formation ?</p>
+      <ul>
+        <li>Des exercices accessibles, réalisables chez toi.</li>
+        <li>Pas besoin d’équipement : utilise juste ton corps.</li>
+        <li>Programme progressif pour éviter les blessures.</li>
+        <li>Des vidéos et images explicatives pour chaque mouvement.</li>
+        <li>Améliore ton énergie, ta posture et ton bien-être général.</li>
+      </ul>
+      <p><a href="pdf/remise_en_forme_30j.pdf" target="_blank" class="btn">Télécharger la formation (PDF)</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Développement Personnel - Robin</p>
+  </footer>
+</body>
+</html>
