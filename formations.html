@@ -1,9 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Formations - Développement Personnel</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin: 0;
+    }
+    nav {
+      background-color: #111;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 15px 0;
+      gap: 40px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #999;
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+      font-size: 1.3rem;
+      color: #333;
+    }
+    main h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .formation {
+      background: #f0f0f0;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      border-left: 6px solid #000;
+      border-radius: 6px;
+    }
+    .formation h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+    .formation p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #000;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #444;
+    }
+    .coming-soon {
+      font-style: italic;
+      color: #666;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -25,7 +115,7 @@
     <div class="formation">
       <h3>Remise en forme en 30 jours (Gratuite)</h3>
       <p>Un programme simple et efficace pour retrouver la forme, sans matériel, en 30 jours.</p>
-      <a href="#">Télécharger le PDF</a>
+      <a href="#" class="btn">Accéder à la formation</a>
     </div>
 
     <div class="formation coming-soon">
