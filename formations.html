@@ -56,42 +56,53 @@
       margin-bottom: 30px;
       text-align: center;
     }
+    .category {
+      margin-bottom: 50px;
+    }
+    .category h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+    }
+    .formation-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
     .formation {
       background: #f0f0f0;
-      padding: 25px 30px;
-      margin-bottom: 30px;
+      padding: 20px 25px;
       border-left: 6px solid #000;
       border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .formation h3 {
-      font-size: 1.8rem;
+    .formation h4 {
+      font-size: 1.5rem;
       margin-bottom: 15px;
     }
     .formation p {
       margin-bottom: 20px;
-      line-height: 1.6;
+      line-height: 1.5;
+      flex-grow: 1;
     }
     .btn {
-      display: inline-block;
       background-color: #000;
       color: #fff;
-      padding: 15px 30px;
-      font-size: 1.2rem;
+      padding: 12px 25px;
+      font-size: 1.1rem;
       font-weight: 700;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      text-align: center;
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
     .btn:hover {
       background-color: #444;
-    }
-    .coming-soon {
-      font-style: italic;
-      color: #666;
-      text-align: center;
-      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -109,19 +120,76 @@
   </header>
 
   <main>
-    <h2>Mes Formations en Développement Personnel</h2>
-    <p>Voici les formations disponibles actuellement. D'autres seront ajoutées régulièrement.</p>
+    <h2>Choisissez votre formation</h2>
 
-    <div class="formation">
-      <h3>Remise en forme en 30 jours (Gratuite)</h3>
-      <p>Un programme simple et efficace pour retrouver la forme, sans matériel, en 30 jours.</p>
-      <a href="#" class="btn">Accéder à la formation</a>
-    </div>
+    <section class="category">
+      <h3>Crossfit</h3>
+      <div class="formation-list">
+        <div class="formation">
+          <h4>Initiation Crossfit</h4>
+          <p>Découvrez les bases du Crossfit pour améliorer votre condition physique générale.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+        <div class="formation">
+          <h4>Crossfit avancé</h4>
+          <p>Programme intensif pour améliorer force, endurance et explosivité.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+      </div>
+    </section>
 
-    <div class="formation coming-soon">
-      <h3>Formations à venir...</h3>
-      <p>Nutrition, gestion du temps, confiance en soi... reste connecté !</p>
-    </div>
+    <section class="category">
+      <h3>Musculation avec matériel</h3>
+      <div class="formation-list">
+        <div class="formation">
+          <h4>Musculation débutant</h4>
+          <p>Apprenez à utiliser les équipements de musculation en toute sécurité.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+        <div class="formation">
+          <h4>Programme force et volume</h4>
+          <p>Augmentez votre masse musculaire grâce à un entraînement structuré.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <h3>Musculation poids du corps</h3>
+      <div class="formation-list">
+        <div class="formation">
+          <h4>Remise en forme sans matériel</h4>
+          <p>30 jours pour retrouver la forme avec des exercices au poids du corps.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+        <div class="formation">
+          <h4>Gainage et renforcement</h4>
+          <p>Développez force et stabilité grâce aux exercices de gainage.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="category">
+      <h3>Objectifs spécifiques</h3>
+      <div class="formation-list">
+        <div class="formation">
+          <h4>Perdre du poids</h4>
+          <p>Programme combinant nutrition et sport pour une perte de poids efficace.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+        <div class="formation">
+          <h4>Prendre du muscle</h4>
+          <p>Optimisez votre prise de masse musculaire avec des méthodes éprouvées.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+        <div class="formation">
+          <h4>Devenir plus athlétique</h4>
+          <p>Améliorez votre agilité, vitesse et coordination pour un corps performant.</p>
+          <a href="#" class="btn">Accéder</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
