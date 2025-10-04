@@ -7,44 +7,63 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f5f5f5;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
       color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
     }
     h1 {
+      text-align: center;
       color: #007acc;
-      margin-bottom: 20px;
     }
-    .btn-paypal {
-      background-color: #ffc439;
-      color: #111;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #007acc;
+      color: white;
       font-weight: 700;
-      font-size: 1.4rem;
-      padding: 15px 40px;
-      border: none;
-      border-radius: 8px;
       cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
-      transition: box-shadow 0.3s ease;
+      border: none;
     }
-    .btn-paypal:hover {
-      box-shadow: 0 6px 12px rgb(0 0 0 / 0.3);
+    button:hover {
+      background-color: #005f99;
     }
   </style>
 </head>
 <body>
-
-  <h1>Paiement sécurisé avec PayPal</h1>
-
-  <a class="btn-paypal" href="https://www.paypal.com/paypalme/tonnom" target="_blank" rel="noopener noreferrer">
-    Payer via PayPal
-  </a>
-
+  <h1>Paiement</h1>
+  <form>
+    <label for="nom">Nom complet</label>
+    <input type="text" id="nom" required />
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" required />
+    
+    <label for="formation">Choisir la formation</label>
+    <select id="formation" required>
+      <option value="">-- Sélectionner --</option>
+      <option value="crossfit">Crossfit</option>
+      <option value="musculation-sans-materiel">Musculation Sans Matériel</option>
+      <option value="musculation-poids-du-corps">Musculation Poids du Corps</option>
+      <option value="perdre-du-poids">Perdre du Poids</option>
+      <option value="nutrition">Nutrition</option>
+    </select>
+    
+    <button type="submit">Payer</button>
+  </form>
 </body>
 </html>
