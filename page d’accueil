@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Développement Personnel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Développement Personnel</h1>
+    <p class="accroche">“Investis en toi pour transformer ta vie.”</p>
+    <nav>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="formations.html">Formations</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>À propos de Robin</h2>
+      <p>Je m'appelle Robin, j'ai 20 ans, je suis un jeune entrepreneur sportif passionné.  
+      Je pratique la musculation, la course à pied et le MMA depuis mon enfance.  
+      J'ai créé ce site pour t'aider à te transformer physiquement et mentalement grâce à des formations simples, accessibles et efficaces.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Développement Personnel - Robin</p>
+  </footer>
+</body>
+</html>
